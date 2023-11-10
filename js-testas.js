@@ -87,9 +87,27 @@ BMI = 80 / 1.8**2 = 24.69
 Viršsvoris = BMI > 25
 Normalu = 18.5 <= BMI < 25
 Per mažas svoris = BMI < 18.
+*/
 
+function bmi (svoris, ugis) {
+    let bmi = svoris/ (ugis ** 2)
+  
+    if (bmi <= 18) {
+  
+      return "Nepakankamas svoris";
+    } else if (bmi <= 25) {
+  
+      return "Normalalus svoris"
+    
+    } else if (bmi <= 30) {
+  
+      return "Virsvoris"
+    } else if (bmi > 30) {
+      return "Nutukes"
+    }
+  }
+  console.log(bmi(73, 1.75))
 
-/*
 4. Parašykite programą, kuri iš duoto žmogaus amžiaus metais
 pasakytų kiek tai yra sekundėmis, minutėmis, valandomis,
 dienomis.
