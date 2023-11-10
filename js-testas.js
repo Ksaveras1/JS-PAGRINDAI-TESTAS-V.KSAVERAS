@@ -7,12 +7,12 @@ doleriais.
 */
 //Sprendimo eiga: konvertavimas formulemis nusistacius kursa/atsitiktinio skaiciaus generavimas (euru suma)/ atsitiktinio skaiciaus (euru suma) ispausdinimas konvertuojat ji i USD
 
-function convertCurrency(amount, fromCurrency, toCurrency) { 
-  const exchangeRate = getExchangeRate(fromCurrency, toCurrency); 
+function keitimasValiutos(amount, fromCurrency, toCurrency) { 
+  const exchangeRate = kursas(fromCurrency, toCurrency); 
   const convertedAmount = exchangeRate * amount; 
   return convertedAmount;
 } 
-function getExchangeRate(fromCurrency, toCurrency) { 
+function kursas(fromCurrency, toCurrency) { 
   const exchangeRates = { 
     Euras:   1.00, 
     Doleris: 1.067,
@@ -25,18 +25,10 @@ const amount = Math.floor(Math.random() * (max - min + 1)) + min;
 
 const fromCurrency = "Euras"; 
 const toCurrency = "Doleris"; 
-const convertedAmount = convertCurrency(amount, fromCurrency, toCurrency); 
+const convertedAmount = keitimasValiutos(amount, fromCurrency, toCurrency); 
 // Ispausdinimas EUR i USD  konvertavimas be  apvalinimo po kablelio :
 console.log(`Atsitiktinis skaicius tarp ${min} ir ${max} yra ${amount}(t.y.euru suma)`, 'o si suma', amount,'EUR','=', convertedAmount ,'USD');
 
-// Ispausdinimas EUR i USD  konvertavimas su  apvalinimu.2 skaiciai po kablelio:
-function roundToDecimalPlaces(num, decimalPlaces) {
-  const factor = Math.pow(10, decimalPlaces);
-  return Math.round(num * factor) / factor;
-}
-const num = convertedAmount;
-const roundedNum = roundToDecimalPlaces(num, 2);
-console.log(`Atsitiktinis skaicius tarp ${min} ir ${max} yra ${amount}(t.y.euru suma)`, 'o si suma', amount,'EUR','=', roundedNum ,'USD');
 
 /*
 2. Sukurkite funkciją, kuri paverstų dolerius į eurus.
@@ -46,12 +38,12 @@ eurais.
 */
 //Sprendimo eiga: konvertavimas formulemis nusistacius kursa/atsitiktinio skaiciaus generavimas/ atsitiktinio skaiciaus (doleriu suma) ispausdinimas konvertuojat ji i EUR 
 
-function convertCurrency1(amount1, fromCurrency1, toCurrency1) { 
-  const exchangeRate1 = getExchangeRate1(fromCurrency1, toCurrency1); 
+function keitimasValiutos1(amount1, fromCurrency1, toCurrency1) { 
+  const exchangeRate1 = kursas1(fromCurrency1, toCurrency1); 
   const convertedAmount1 = exchangeRate1 * amount1; 
   return convertedAmount1;
 } 
-function getExchangeRate1(fromCurrency1, toCurrency1) { 
+function kursas1(fromCurrency1, toCurrency1) { 
   const exchangeRates1 = { 
     Doleris1: 1.00,
     Euras1: 0.9333, 
@@ -66,17 +58,8 @@ const fromCurrency1 = "Doleris1";
 const toCurrency1 = "Euras1"; 
 
 // Atsakymas USD i EUR  konvertavimas be  apvalinimo po kablelio :
-const convertedAmount1 = convertCurrency1(amount1, fromCurrency1, toCurrency1); 
+const convertedAmount1 = keitimasValiutos1(amount1, fromCurrency1, toCurrency1); 
 console.log(`Atsitiktinis skaicius tarp ${min1} ir ${max1} yra ${amount1}(t.y.euru suma)`, 'o si suma', amount1,'USD','=', convertedAmount1 ,'EUR');
-
-// Atsakymas USD i EUR  konvertavimas su  apvalinimu.2 skaiciai po kablelio:
-function roundToDecimalPlaces1(num1, decimalPlaces1) {
-  const factor1 = Math.pow(10, decimalPlaces1);
-  return Math.round(num1 * factor1) / factor1;
-}
-const num1 = convertedAmount1;
-const roundedNum1 = roundToDecimalPlaces1(num1, 2);
-console.log(`Atsitiktinis skaicius tarp ${min1} ir ${max1} yra ${amount1}(t.y.euru suma)`, 'o si suma',amount1,'USD','=', roundedNum1 ,'EUR');
 
 /*
 3. Parašykite programą, kuri suskaičiuotų žmogaus BMI (body
@@ -89,7 +72,7 @@ Normalu = 18.5 <= BMI < 25
 Per mažas svoris = BMI < 18.
 */
 
-function bmi (svoris, ugis) {
+function BmiIndeksas (svoris, ugis) {
     let bmi = svoris/ (ugis ** 2)
   
     if (bmi <= 18) {
@@ -106,7 +89,7 @@ function bmi (svoris, ugis) {
       return "Nutukes"
     }
   }
-  console.log(bmi(73, 1.75))
+  console.log(BmiIndeksas(73, 1.75))
 
 4./*Parašykite programą, kuri iš duoto žmogaus amžiaus metais
 //pasakytų kiek tai yra sekundėmis, minutėmis, valandomis,
