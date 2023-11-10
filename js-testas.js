@@ -264,10 +264,10 @@ simboliai privalo būti atsitiktiniai ir atsitiktine tvarka.
 */
 //Sprendimas: 
 function generuotiSlaptazodi() {
-  var slaptazodis = '';
-  var simboliai = '0231456978' + 'jklmnopqrabcdefghistuvwxyz' + 'VWXYZEFGHIJKLMNOABCDPQRSTU'+ '+_`|%!@^&(}#$){[]:;?*<,./-=';
-  for (var i = 1; i <= 12; i++) {
-    var atsitiktinis = Math.floor(Math.random() * simboliai.length + 1);
+  let slaptazodis = '';
+  let simboliai = '0231456978' + 'jklmnopbcdef' + 'VWXYZEFGH'+ '+_`|%!(}#$){[]-=';
+  for (let i = 1; i <= 12; i++) {
+    let atsitiktinis = Math.floor(Math.random() * simboliai.length + 1);
     slaptazodis += simboliai.charAt(atsitiktinis)
   }
   return slaptazodis;
