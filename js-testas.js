@@ -179,7 +179,7 @@ let x = 10;
 let skaiciuEile = [...Array(x+1).keys()].splice(1).join('-');
 console.log(skaiciuEile);
 
-//Atsakymas abiem atvejais: 1-2-3-4-5-6-7-7-9-10
+//Atsakymas abiem variantais: 1-2-3-4-5-6-7-7-9-10
 
 /*
 7. Panaudokite for ciklus, kad sukurtumėte tokį vaizdą konsolėje.
@@ -208,7 +208,7 @@ for(let i = 5; i <= 5; i++) {
       console.log("*".repeat(i));
      } 
   
-//Atsakymai abiem variantais: 
+//Atsakymas: 
 
 // *
 // **
