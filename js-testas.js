@@ -25,12 +25,11 @@ const amount = Math.floor(Math.random() * (max - min + 1)) + min;
 
 const fromCurrency = "Euras"; 
 const toCurrency = "Doleris"; 
-
-// Atsakymas EUR i USD  konvertavimas be  apvalinimo po kablelio :
 const convertedAmount = convertCurrency(amount, fromCurrency, toCurrency); 
+// Ispausdinimas EUR i USD  konvertavimas be  apvalinimo po kablelio :
 console.log(`Atsitiktinis skaicius tarp ${min} ir ${max} yra ${amount}(t.y.euru suma)`, 'o si suma', amount,'EUR','=', convertedAmount ,'USD');
 
-// Atsakymas EUR i USD  konvertavimas su  apvalinimu.2 skaiciai po kablelio:
+// Ispausdinimas EUR i USD  konvertavimas su  apvalinimu.2 skaiciai po kablelio:
 function roundToDecimalPlaces(num, decimalPlaces) {
   const factor = Math.pow(10, decimalPlaces);
   return Math.round(num * factor) / factor;
@@ -100,7 +99,7 @@ function convertToDays(ageInYears) {
   var ageInDays = ageInYears * 365;
   return ageInDays;
 }
-var result = convertToDays(20);
+var result = convertToDays(x);
 console.log(result); 
 //Atsakymas: istacius i '(x)' amziaus metu skaiciu gaunam dienas.
 
@@ -138,12 +137,12 @@ duomenis iš Farenheito į Celsijų, ir atvirkščiai.
 
 //Sprendimas:
 
-let farenheitas1 = 50; 
+let farenheitas1 = x; //istatyti reiksme
 let celsius1 = (farenheitas1 - 32) * 5/9; 
 
 console. log('Jei farenheitas yra', farenheitas1, 'tai celsius yra', celsius1);
 
-let celsius2 = 15; 
+let celsius2 = x; //istatyti reiksme
 let farenheitas2 = (celsius2 * 9/5) + 32; 
 
 console. log('Jei celsiu yra', celsius2, 'tai farenheitas yra', farenheitas2);
