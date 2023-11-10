@@ -208,12 +208,6 @@ for(let i = 5; i <= 5; i++) {
       console.log("*".repeat(i));
      } 
   
-     //Kitas variantas: 
-     
-for(let i = 0; i <= 5; i++) { 
-      console.log("*".repeat(i));
-     } 
-
 //Atsakymai abiem variantais: 
 
 // *
