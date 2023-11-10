@@ -108,8 +108,8 @@ function bmi (svoris, ugis) {
   }
   console.log(bmi(73, 1.75))
 
-4. Parašykite programą, kuri iš duoto žmogaus amžiaus metais
-pasakytų kiek tai yra sekundėmis, minutėmis, valandomis,
+4./*Parašykite programą, kuri iš duoto žmogaus amžiaus metais
+//pasakytų kiek tai yra sekundėmis, minutėmis, valandomis,
 dienomis.
 */
 //Sprendimas: amziaus metai paversti i dienas:
