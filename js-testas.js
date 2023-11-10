@@ -176,8 +176,8 @@ console.log(output);
 
 let x = 10;
 
-let stringOfNumbers = [...Array(x+1).keys()].splice(1).join('-');
-console.log(stringOfNumbers);
+let skaiciuEile = [...Array(x+1).keys()].splice(1).join('-');
+console.log(skaiciuEile);
 
 //Atsakymas abiem atvejais: 1-2-3-4-5-6-7-7-9-10
 
