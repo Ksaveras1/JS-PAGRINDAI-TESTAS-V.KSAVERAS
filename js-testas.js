@@ -1,4 +1,4 @@
-//
+
 /* 
 1. Sukurkite funkciją, kuri paverstų eurus į dolerius.
 Sugeneruokite atsitiktinį skaičių (eurų sumą) nuo 1 iki 1000.
